@@ -670,7 +670,7 @@ function setupPledgeListeners() {
 }
 
 function clearLocalPledges() {
-  localStorage.removeItem('thuligal_pledges');
+  localStorage.removeItem('kadamba_vanam_pledges');
   renderLocalPledgeList();
 }
 
@@ -723,7 +723,7 @@ window.submitPledge = function() {
 };
 
 function saveLocalPledge(pledgeData) {
-  let pledges = JSON.parse(localStorage.getItem('thuligal_pledges')) || [];
+  let pledges = JSON.parse(localStorage.getItem('kadamba_vanam_pledges')) || [];
   pledgeData.date = new Date().toISOString();
   pledges.push(pledgeData);
   localStorage.setItem('kadamba_vanam_pledges', JSON.stringify(pledges));
