@@ -18,7 +18,7 @@ if (typeof supabase !== 'undefined' && typeof supabase.createClient === 'functio
   }
 } else {
   console.log("Supabase credentials not configured or script not loaded. Falling back to LocalStorage.");
-
+}
 
 // Quiz Questions Pool (Derived from trees database)
 const QUIZ_QUESTIONS_POOL = [
@@ -670,7 +670,7 @@ function setupPledgeListeners() {
 }
 
 function clearLocalPledges() {
-  localStorage.removeItem('kadamba_vanam_pledges');
+  localStorage.removeItem('thuligal_pledges');
   renderLocalPledgeList();
 }
 
@@ -723,9 +723,9 @@ window.submitPledge = function() {
 };
 
 function saveLocalPledge(pledgeData) {
-  let pledges = JSON.parse(localStorage.getItem('kadamba_vanam_pledges')) || [];
+  let pledges = JSON.parse(localStorage.getItem('thuligal_pledges')) || [];
   pledgeData.date = new Date().toISOString();
   pledges.push(pledgeData);
-  localStorage.setItem('kadamba_vanam_pledges', JSON.stringify(pledges));
+  localStorage.setItem('thuligal_pledges', JSON.stringify(pledges));
   renderLocalPledgeList();
 }
