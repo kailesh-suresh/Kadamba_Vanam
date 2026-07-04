@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Best Practices -->
+  <title>Kadamba Vanam - Educational Guide to Native Trees of Tamil Nadu</title>
+  <meta name="description" content="Discover the rich ecological, historical, and medicinal heritage of 25 native trees of Tamil Nadu. Take our eco-quiz and pledge to plant today!">
+  <meta name="keywords" content="native trees, Tamil Nadu, Kadamba Vanam, Aegle marmelos, Terminalia arjuna, conservation, ecology, Ayurveda, temple trees, Sthala Vriksham">
+  <meta name="author" content="Kadamba Vanam Team">
+  
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header id="site-header">
+    <div class="logo-container">
+      <div class="logo-icon">
+        <i class="fa-solid fa-tree"></i>
+      </div>
+      <div>
+        <span class="logo-text">Kadamba Vanam</span>
+        <span class="logo-sub">Student Awareness Initiative</span>
+      </div>
+    </div>
+    <nav id="main-nav">
+      <a href="#hero" class="nav-link active" id="nav-home">Home</a>
+      <a href="#explorer" class="nav-link" id="nav-explore">Explore Trees</a>
+      <a href="#quiz" class="nav-link" id="nav-quiz">Eco-Quiz</a>
+      <a href="#restoration" class="nav-link" id="nav-action">Take Action</a>
+    </nav>
+    <a href="#restoration" class="btn-cta" id="header-cta-btn">Pledge to Plant</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-wrapper">
+      <img src="images/hero_bg.png" alt="Lush South Indian forest morning with sunlight filtering through native trees" class="hero-bg" id="hero-background-img">
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-seedling"></i> Student Ecological Awareness
+      </div>
+      <h1>Reviving the <span>Green Canopy</span> of Tamil Nadu</h1>
+      <p>Embark on an educational journey to discover the sacred geometry, healing virtues, and deep-rooted histories of 25 native tree species that shape our ecosystem.</p>
+      <div class="hero-buttons">
+        <a href="#explorer" class="btn-primary" id="hero-explore-btn"><i class="fa-solid fa-compass"></i> Start Exploring</a>
+        <a href="#quiz" class="btn-secondary" id="hero-quiz-btn"><i class="fa-solid fa-gamepad"></i> Challenge Yourself</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <section class="stats-banner" id="stats-summary" aria-label="Ecosystem Statistics">
+    <div class="stat-item">
+      <div class="stat-number" id="stat-species-count">25</div>
+      <div class="stat-label">Native Species</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" id="stat-medicinal-count">15+</div>
+      <div class="stat-label">Medicinal Assets</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" id="stat-temple-count">18</div>
+      <div class="stat-label">Sthala Vrikshas</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" id="stat-biodiversity-index">100%</div>
+      <div class="stat-label">Biodiversity Focus</div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+    
+    <!-- Tree Explorer Section -->
+    <section id="explorer" aria-label="Tree Catalog">
+      <div class="section-title">
+        <h2>Native Tree Catalog</h2>
+        <p>Browse through the unique characteristics of our regional flora. Filter by uses, or search directly for specific local or botanical names.</p>
+      </div>
+
+      <!-- Controls Wrapper -->
+      <div class="explorer-controls" id="catalog-controls">
+        <div class="search-filter-row">
+          
+          <!-- Search box -->
+          <div class="search-box-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="tree-search-bar" class="search-input" placeholder="Search by common name, botanical name, or significance..." aria-label="Search trees">
+          </div>
+          
+        </div>
+
+        <!-- Filter Tags row -->
+        <div class="filter-categories" id="filter-categories-container">
+          <span class="filter-label">Filter By:</span>
+          <button class="filter-tag active" data-category="all" id="filter-all">All Species</button>
+          <button class="filter-tag" data-category="medicinal" id="filter-medicinal">Medicinal / Health</button>
+          <button class="filter-tag" data-category="sacred" id="filter-sacred">Sacred (Temple Vriksham)</button>
+          <button class="filter-tag" data-category="fruit" id="filter-fruit">Fruit Bearing</button>
+          <button class="filter-tag" data-category="flowering" id="filter-flowering">Flowering</button>
+          <button class="filter-tag" data-category="historical" id="filter-historical">Historical / Literary</button>
+        </div>
+
+        <!-- Results Counter -->
+        <div class="results-summary">
+          <div class="results-count" id="results-count-display">Showing <span>25</span> trees</div>
+          <div class="sort-indicator">Sorted Alphabetically</div>
+        </div>
+      </div>
+
+      <!-- Trees Grid -->
+      <div class="tree-grid" id="tree-cards-grid" role="region" aria-live="polite">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section" id="quiz">
+      
+      <!-- Quiz Intro View -->
+      <div class="quiz-intro" id="quiz-intro-card">
+        <i class="fa-solid fa-graduation-cap" style="font-size: 48px; color: var(--accent);"></i>
+        <h2>Eco-Knowledge Challenge</h2>
+        <p>Test your understanding of Tamil Nadu's native flora! Can you identify our state tree, or point out which roots clean the blood? Take this quick 5-question trivia game and become an certified green guardian.</p>
+        <button class="btn-accent" id="start-quiz-btn"><i class="fa-solid fa-play"></i> Begin Quiz</button>
+      </div>
+
+      <!-- Active Quiz View -->
+      <div class="quiz-container" id="quiz-game-container">
+        <div class="quiz-header">
+          <span id="quiz-question-number">Question 1 of 5</span>
+          <span id="quiz-timer-score">Score: 0 / 0</span>
+        </div>
+        
+        <div class="quiz-progress-bar-wrapper">
+          <div class="quiz-progress-bar" id="quiz-progress-indicator"></div>
+        </div>
+
+        <div class="quiz-card">
+          <p class="quiz-question" id="quiz-question-text">Loading question...</p>
+          <div class="quiz-options" id="quiz-options-container">
+            <!-- Options injected dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz Results View -->
+      <div class="quiz-results" id="quiz-results-card">
+        <i class="fa-solid fa-award" style="font-size: 56px; color: var(--accent);"></i>
+        <h2>Quiz Completed!</h2>
+        <div class="results-score-circle">
+          <span class="score-num" id="quiz-final-score">4</span>
+          <span class="score-total">out of 5</span>
+        </div>
+        <p id="quiz-feedback-text">Excellent job! You are well-versed in the green lore of our lands.</p>
+        <button class="btn-accent" id="restart-quiz-btn"><i class="fa-solid fa-rotate-right"></i> Play Again</button>
+      </div>
+    </section>
+
+    <!-- Action & Restoration -->
+    <section class="restoration-section" id="restoration">
+      <div class="restoration-left">
+        <span class="restoration-badge">Join the Awareness Movement</span>
+        <h2>Why Local Trees Matter</h2>
+        <p>Native trees are the backbone of our regional ecology. They are perfectly adapted to our local climate, requiring minimal water while providing maximum support to local wildlife and soil health. Spreading awareness is the first step toward reviving our natural heritage.</p>
+        
+        <div class="awareness-quotes" style="margin: 25px 0; padding: 20px; border-left: 4px solid var(--accent); background: rgba(43, 112, 76, 0.05);">
+            <p style="font-style: italic; font-size: 16px; margin-bottom: 10px;">"The greatest threat to our planet is the belief that someone else will save it."</p>
+            <p style="font-style: italic; font-size: 16px;">"In every walk with nature, one receives far more than he seeks."</p>
+        </div>
+        
+        <p style="font-style: italic; font-size: 14.5px;">"The best time to plant a tree was twenty years ago. The second best time is now." &mdash; Ancient Proverb</p>
+      </div>
+
+      <div class="restoration-right">
+        <div class="pledge-card" id="pledge-card-wrapper">
+          <h3>Ecosystem Pledge</h3>
+          <p>Commit to learning more about and planting native trees in your local community. Share your pledge and inspire others.</p>
+          
+          <form class="pledge-form" id="tree-pledge-form" onsubmit="event.preventDefault(); submitPledge();">
+            <label for="pledge-name" style="display:none">Full Name</label>
+            <input type="text" id="pledge-name" class="pledge-input" placeholder="Your Full Name" required>
+            
+            <label for="pledge-email" style="display:none">Email Address</label>
+            <input type="email" id="pledge-email" class="pledge-input" placeholder="Your Email Address" required>
+            
+            <label for="pledge-count" style="display:none">Number of Trees</label>
+            <input type="number" id="pledge-count" class="pledge-input" placeholder="How many trees will you plant?" min="1" max="1000" required>
+            
+            <button type="submit" class="pledge-btn" id="pledge-submit-button">Submit My Pledge</button>
+          </form>
+          
+          <div class="pledge-success" id="pledge-success-msg">
+            <i class="fa-solid fa-circle-check" style="font-size: 32px; margin-bottom: 12px; display: block; color: var(--accent);"></i>
+            Thank you for pledging! Your commitment helps spread awareness for a greener future.
+          </div>
+        </div>
+
+        <!-- Wall of Honor / Pledger List -->
+        <div class="pledge-card" id="pledgers-list-wrapper" style="margin-top: 24px; padding: 24px; background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(43, 112, 76, 0.1);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <h3 style="font-size: 18px; margin: 0;"><i class="fa-solid fa-trophy" style="color: var(--accent); margin-right: 6px;"></i> Wall of Honor</h3>
+            <span id="total-pledges-count" style="font-size: 13px; font-weight: 700; color: var(--primary-light); background: rgba(43, 112, 76, 0.08); padding: 4px 10px; border-radius: 4px;">0 Trees Pledged</span>
+          </div>
+          <div id="pledgers-list-container" style="max-height: 180px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px; margin-bottom: 14px;">
+            <p style="font-size: 13px; color: var(--text-muted); text-align: center; font-style: italic; margin: 10px 0;">No pledges submitted yet. Be the first!</p>
+          </div>
+          <button id="clear-pledges-btn" style="background: transparent; color: #c0392b; border: 1px dashed #c0392b; padding: 6px 12px; font-size: 11px; font-weight: 700; border-radius: 4px; cursor: pointer; display: block; width: 100%; transition: var(--transition-fast);">Clear All Pledges</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="site-footer">
+    <div class="footer-top">
+      <div class="footer-info">
+        <div class="logo-container" style="margin-bottom: 16px;">
+          <div class="logo-icon" style="background: var(--accent); color: var(--primary-dark);">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <div>
+            <span class="logo-text" style="background: none; -webkit-text-fill-color: var(--text-light); color: var(--text-light);">Kadamba Vanam</span>
+            <span class="logo-sub" style="color: var(--accent);">Student Initiative</span>
+          </div>
+        </div>
+        <p>An educational platform dedicated to spreading awareness about indigenous tree conservation in Tamil Nadu.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Explore</h4>
+        <a href="#hero" class="footer-link">Home</a>
+        <a href="#explorer" class="footer-link">Tree Catalog</a>
+        <a href="#quiz" class="footer-link">Eco-Quiz</a>
+        <a href="#restoration" class="footer-link">Take Action</a>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Native Trees</h4>
+        <a href="#explorer" class="footer-link" onclick="triggerFilter('sacred')">Sthala Vrikshas</a>
+        <a href="#explorer" class="footer-link" onclick="triggerFilter('medicinal')">Medicinal Trees</a>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>References</h4>
+        <a href="https://en.wikipedia.org/wiki/Sthala_Vriksha" target="_blank" rel="noopener" class="footer-link">Sthala Vriksha Heritage</a>
+        <a href="https://www.ayurveda.com" target="_blank" rel="noopener" class="footer-link">Ayurveda Botanical Index</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kadamba Vanam. Built for educational awareness.</p>
+      <p>Made with <i class="fa-solid fa-heart" style="color: var(--accent);"></i> for Tamil Nadu's Heritage.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
